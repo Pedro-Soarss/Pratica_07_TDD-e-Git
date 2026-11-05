@@ -34,4 +34,17 @@ public class ContaCliente {
     public double getSaldo() {
         return saldo;
     }
+    
+    
+    /**
+     * Adiciona um deposito e retorna o novo saldo.
+     *
+     * @param valor valor a depositar
+     * @return saldo atualizado
+     */
+    public double addDeposito(double valor) {
+        this.saldo += valor;
+        return this.saldo;
+    }
+
 }
