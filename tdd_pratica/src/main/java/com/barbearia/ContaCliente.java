@@ -99,4 +99,21 @@ public void setSaldo(double saldo) {
     this.saldo = saldo;
 }
 
+
+/**
+ * Retorna os dados da conta em formato de texto.
+ *
+ * @return representacao textual da conta
+ */
+@Override
+public String toString() {
+    return String.format(
+        java.util.Locale.US,
+        "%s (%d) saldo=R$%.2f",
+        cliente.getNome(),
+        id,
+        saldo
+    );
+}
+
 }
