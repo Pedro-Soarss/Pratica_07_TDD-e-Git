@@ -34,7 +34,7 @@ public class ContaCliente {
     public double getSaldo() {
         return saldo;
     }
-    
+
     
     /**
      * Adiciona um deposito e retorna o novo saldo.
@@ -46,5 +46,18 @@ public class ContaCliente {
         this.saldo += valor;
         return this.saldo;
     }
+
+/**
+ * Realiza uma retirada do saldo, quando possível.
+ *
+ * @param valor valor a retirar
+ * @return saldo atualizado
+ */
+public double subSaldo(double valor) {
+    if (valor > 0 && valor <= saldo) {
+        saldo -= valor;
+    }
+    return saldo;
+}
 
 }
