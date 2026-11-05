@@ -62,4 +62,17 @@ public void deveImpedirRetiradaComSaldoInsuficiente() {
     assertEquals(100.0, novoSaldo, 0.001);
     assertEquals(100.0, conta.getSaldo(), 0.001);
 }
+
+/**
+ * Verifica a criacao de uma conta apenas com ID.
+ */
+@Test
+public void deveCriarContaApenasComId() {
+    ContaCliente conta = new ContaCliente(1);
+
+    assertEquals(1, conta.getId());
+    assertEquals(null, conta.getCliente());
+    assertEquals(0.0, conta.getSaldo(), 0.001);
+}
+
 }

@@ -59,5 +59,14 @@ public double subSaldo(double valor) {
     }
     return saldo;
 }
-
+/**
+ * Cria uma conta informando apenas o ID.
+ *
+ * @param id identificador da conta
+ */
+public ContaCliente(int id) {
+    this.id = id;
+    this.cliente = null;
+    this.saldo = 0.0;
+}
 }
