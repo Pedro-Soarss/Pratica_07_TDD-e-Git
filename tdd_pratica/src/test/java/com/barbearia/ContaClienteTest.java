@@ -102,4 +102,18 @@ public void deveAlterarClienteDaConta() {
 
     assertEquals(cliente2, conta.getCliente());
 }
+
+/**
+ * Verifica se o saldo da conta pode ser alterado.
+ */
+@Test
+public void deveAlterarSaldoDaConta() {
+    Cliente cliente = new Cliente(1, "Carlos Silva", 10, "m");
+    ContaCliente conta = new ContaCliente(1, cliente, 100.0);
+
+    conta.setSaldo(250.0);
+
+    assertEquals(250.0, conta.getSaldo(), 0.001);
+}
+
 }
