@@ -89,4 +89,14 @@ public ContaCliente(int id, Cliente cliente) {
 public void setCliente(Cliente cliente) {
     this.cliente = cliente;
 }
+
+/**
+ * Altera o saldo da conta.
+ *
+ * @param saldo novo saldo da conta
+ */
+public void setSaldo(double saldo) {
+    this.saldo = saldo;
+}
+
 }
