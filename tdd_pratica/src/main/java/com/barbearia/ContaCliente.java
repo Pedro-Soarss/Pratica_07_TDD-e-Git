@@ -81,4 +81,12 @@ public ContaCliente(int id, Cliente cliente) {
     this.cliente = cliente;
     this.saldo = 0.0;
 }
+/**
+ * Altera o cliente associado a conta.
+ *
+ * @param cliente novo cliente associado
+ */
+public void setCliente(Cliente cliente) {
+    this.cliente = cliente;
+}
 }

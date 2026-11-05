@@ -87,4 +87,19 @@ public void deveCriarContaComIdECliente() {
     assertEquals(cliente, conta.getCliente());
     assertEquals(0.0, conta.getSaldo(), 0.001);
 }
+
+/**
+ * Verifica se o cliente associado a conta pode ser alterado.
+ */
+@Test
+public void deveAlterarClienteDaConta() {
+    Cliente cliente1 = new Cliente(1, "Carlos Silva", 10, "m");
+    Cliente cliente2 = new Cliente(2, "Ana Souza", 5, "f");
+
+    ContaCliente conta = new ContaCliente(1, cliente1, 100.0);
+
+    conta.setCliente(cliente2);
+
+    assertEquals(cliente2, conta.getCliente());
+}
 }
