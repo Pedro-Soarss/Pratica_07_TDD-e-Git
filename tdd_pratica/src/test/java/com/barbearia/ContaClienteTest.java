@@ -48,5 +48,18 @@ public void deveSubtrairSaldoQuandoSuficiente() {
     assertEquals(60.0, novoSaldo, 0.001);
     assertEquals(60.0, conta.getSaldo(), 0.001);
 }
+/**
+ * Verifica se uma retirada maior que o saldo
+ * disponível é recusada.
+ */
+@Test
+public void deveImpedirRetiradaComSaldoInsuficiente() {
+    Cliente cliente = new Cliente(1, "Carlos Silva", 10, "m");
+    ContaCliente conta = new ContaCliente(1, cliente, 100.0);
 
+    double novoSaldo = conta.subSaldo(150.0);
+
+    assertEquals(100.0, novoSaldo, 0.001);
+    assertEquals(100.0, conta.getSaldo(), 0.001);
+}
 }
