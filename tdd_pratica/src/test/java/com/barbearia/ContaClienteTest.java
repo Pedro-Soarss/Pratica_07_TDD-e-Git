@@ -116,4 +116,17 @@ public void deveAlterarSaldoDaConta() {
     assertEquals(250.0, conta.getSaldo(), 0.001);
 }
 
+/**
+ * Verifica a representacao textual da conta.
+ */
+@Test
+public void deveExibirDadosDaConta() {
+    Cliente cliente = new Cliente(1, "Carlos Silva", 10, "m");
+    ContaCliente conta = new ContaCliente(1, cliente, 100.0);
+
+    String resultado = conta.toString();
+
+    assertEquals("Carlos Silva (1) saldo=R$100.00", resultado);
+}
+
 }
