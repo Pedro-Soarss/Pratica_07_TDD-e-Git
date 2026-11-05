@@ -69,4 +69,16 @@ public ContaCliente(int id) {
     this.cliente = null;
     this.saldo = 0.0;
 }
+/**
+ * Cria uma conta com ID e cliente, iniciando
+ * o saldo em zero.
+ *
+ * @param id identificador da conta
+ * @param cliente cliente associado
+ */
+public ContaCliente(int id, Cliente cliente) {
+    this.id = id;
+    this.cliente = cliente;
+    this.saldo = 0.0;
+}
 }

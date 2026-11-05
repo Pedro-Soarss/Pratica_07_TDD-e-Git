@@ -74,5 +74,17 @@ public void deveCriarContaApenasComId() {
     assertEquals(null, conta.getCliente());
     assertEquals(0.0, conta.getSaldo(), 0.001);
 }
+/**
+ * Verifica a criacao de uma conta com ID e cliente.
+ */
+@Test
+public void deveCriarContaComIdECliente() {
+    Cliente cliente = new Cliente(1, "Carlos Silva", 10, "m");
 
+    ContaCliente conta = new ContaCliente(1, cliente);
+
+    assertEquals(1, conta.getId());
+    assertEquals(cliente, conta.getCliente());
+    assertEquals(0.0, conta.getSaldo(), 0.001);
+}
 }
